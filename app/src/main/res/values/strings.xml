@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Movie Catalogue</string>
+    <string name="tab1">Movie</string>
+    <string name="tab2">Tv Show</string>
+    <string name="name">name</string>
+    <string name="rating">5</string>
+    <string name="genre">genre</string>
+    <string name="desc">Description : </string>
+    <string name="search">Search</string>
+    <string name="no_match">No Match Found</string>
+    <string name="detail">Detail Movie</string>
+    <string name="favorite">Favorite</string>
+</resources>
