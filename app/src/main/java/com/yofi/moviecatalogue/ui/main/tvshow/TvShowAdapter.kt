@@ -3,24 +3,32 @@ package com.yofi.moviecatalogue.ui.main.tvshow
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.paging.PagedListAdapter
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.yofi.moviecatalogue.BuildConfig
+import com.yofi.moviecatalogue.data.source.local.entities.TvShowEntity
 import com.yofi.moviecatalogue.data.source.response.ItemTvShow
 import com.yofi.moviecatalogue.databinding.ItemFilmBinding
 import com.yofi.moviecatalogue.ui.detail.DetailActivity
 
-class TvShowAdapter: RecyclerView.Adapter<TvShowAdapter.LinearViewHolder>() {
-    private val list = ArrayList<ItemTvShow>()
-
-    fun setListDataTvShow(data: List<ItemTvShow>){
-        list.clear()
-        list.addAll(data)
-        notifyDataSetChanged()
+class TvShowAdapter: PagedListAdapter<TvShowEntity, TvShowAdapter.LinearViewHolder>(DIFF_CALLBACK){
+    companion object {
+        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<TvShowEntity>() {
+            override fun areItemsTheSame(oldItem: TvShowEntity, newItem: TvShowEntity): Boolean {
+                return oldItem.id == newItem.id
+            }
+            override fun areContentsTheSame(oldItem: TvShowEntity, newItem: TvShowEntity): Boolean {
+                return oldItem == newItem
+            }
+        }
     }
 
+    private val list = ArrayList<ItemTvShow>()
+
     inner class LinearViewHolder(val binding: ItemFilmBinding): RecyclerView.ViewHolder(binding.root){
-        fun bind(data: ItemTvShow){
+        fun bind(data: TvShowEntity){
             binding.apply {
                 Glide.with(itemView)
                     .load(BuildConfig.IMAGE_URL + data.posterPath)
@@ -44,7 +52,10 @@ class TvShowAdapter: RecyclerView.Adapter<TvShowAdapter.LinearViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: LinearViewHolder, position: Int) {
-        holder.bind(list[position])
+        val tvShow = getItem(position)
+        if (tvShow!=null){
+            holder.bind(tvShow)
+        }
     }
 
     override fun getItemCount(): Int = list.size

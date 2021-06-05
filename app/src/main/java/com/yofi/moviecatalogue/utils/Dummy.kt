@@ -1,4 +1,4 @@
-package com.yofi.moviecatalogue.data.source.local
+package com.yofi.moviecatalogue.utils
 
 import com.yofi.moviecatalogue.data.source.response.ItemMovie
 import com.yofi.moviecatalogue.data.source.response.ItemTvShow

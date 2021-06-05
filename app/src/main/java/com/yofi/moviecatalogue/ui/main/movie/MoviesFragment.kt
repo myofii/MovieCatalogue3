@@ -3,6 +3,7 @@ package com.yofi.moviecatalogue.ui.main.movie
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,6 +12,7 @@ import com.yofi.moviecatalogue.data.source.response.ItemMovie
 import com.yofi.moviecatalogue.databinding.FragmentListMovieBinding
 import com.yofi.moviecatalogue.ui.main.MainViewModel
 import com.yofi.moviecatalogue.viewmodel.ViewModelFactory
+import com.yofi.moviecatalogue.vo.Status
 
 class MoviesFragment : Fragment(R.layout.fragment_list_movie) {
     private var _binding: FragmentListMovieBinding? = null
@@ -55,15 +57,22 @@ class MoviesFragment : Fragment(R.layout.fragment_list_movie) {
             }
 
             showLoading(true)
-            viewModel.getSearchMovie(q).observe(viewLifecycleOwner,{
-                if (it == ArrayList<ItemMovie>(0)) {
-                    showLoading(false)
-                    adapter.setListDataMovie(it)
+            viewModel.getSearchMovie(q).observe(viewLifecycleOwner,{ listMovie ->
+                if (listMovie != null) {
+                    when (listMovie.status) {
+                        Status.LOADING -> binding.progressBar.visibility = View.VISIBLE
+                        Status.SUCCESS -> {
+                            binding.progressBar.visibility = View.GONE
+                            adapter.submitList(listMovie.data)
+                        }
+                        Status.ERROR -> {
+                            binding.progressBar.visibility = View.GONE
+                            Toast.makeText(context, "Terjadi kesalahan", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                } else {
+                    binding.progressBar.visibility = View.GONE
                     binding.dataNotFound.visibility = View.VISIBLE
-                } else if(it!=null) {
-                    binding.dataNotFound.visibility = View.GONE
-                    adapter.setListDataMovie(it)
-                    showLoading(false)
                 }
             })
         }
@@ -71,13 +80,21 @@ class MoviesFragment : Fragment(R.layout.fragment_list_movie) {
 
     private fun viewModel() {
         activity?.let {
-            viewModel = ViewModelProvider(it, ViewModelFactory.getInstance())[MainViewModel::class.java]
+            viewModel = ViewModelProvider(it, ViewModelFactory.getInstance(requireActivity()))[MainViewModel::class.java]
         }
 
         viewModel.getListMovie().observe(viewLifecycleOwner, { listMovie ->
-            binding.rvMovie.adapter?.let { adapter ->
-                when (adapter) {
-                    is MovieAdapter -> adapter.setListDataMovie(listMovie)
+            if (listMovie != null) {
+                when (listMovie.status) {
+                    Status.LOADING -> binding.progressBar.visibility = View.VISIBLE
+                    Status.SUCCESS -> {
+                        binding.progressBar.visibility = View.GONE
+                        adapter.submitList(listMovie.data)
+                    }
+                    Status.ERROR -> {
+                        binding.progressBar.visibility = View.GONE
+                        Toast.makeText(context, "Terjadi kesalahan", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
         })

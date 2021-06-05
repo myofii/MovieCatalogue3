@@ -11,8 +11,8 @@ import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
 import com.yofi.moviecatalogue.R
-import com.yofi.moviecatalogue.data.EspressoIdlingResource
-import com.yofi.moviecatalogue.data.source.local.Dummy
+import com.yofi.moviecatalogue.utils.EspressoIdlingResource
+import com.yofi.moviecatalogue.utils.Dummy
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule

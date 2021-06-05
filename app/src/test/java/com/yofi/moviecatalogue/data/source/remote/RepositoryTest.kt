@@ -4,9 +4,8 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.eq
 import com.nhaarman.mockitokotlin2.verify
-import com.yofi.moviecatalogue.data.source.local.Dummy
+import com.yofi.moviecatalogue.utils.Dummy
 import com.yofi.moviecatalogue.ui.LiveDataTestUtil
-import junit.framework.Assert
 import kotlinx.coroutines.runBlocking
 import org.junit.Test
 import org.junit.Assert.*

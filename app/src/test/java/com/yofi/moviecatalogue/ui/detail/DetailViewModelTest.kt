@@ -4,8 +4,8 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import com.nhaarman.mockitokotlin2.verify
-import com.yofi.moviecatalogue.data.source.local.Dummy
-import com.yofi.moviecatalogue.data.source.remote.Repository
+import com.yofi.moviecatalogue.utils.Dummy
+import com.yofi.moviecatalogue.data.Repository
 import com.yofi.moviecatalogue.data.source.response.ItemMovie
 import com.yofi.moviecatalogue.data.source.response.ItemTvShow
 import com.yofi.moviecatalogue.ui.detail.DetailViewModel

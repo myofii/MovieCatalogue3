@@ -1,4 +1,4 @@
-package com.yofi.moviecatalogue.data
+package com.yofi.moviecatalogue.utils
 
 import androidx.test.espresso.IdlingResource
 import androidx.test.espresso.idling.CountingIdlingResource

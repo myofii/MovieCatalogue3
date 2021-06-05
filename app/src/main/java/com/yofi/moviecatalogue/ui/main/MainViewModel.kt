@@ -2,16 +2,20 @@ package com.yofi.moviecatalogue.ui.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.yofi.moviecatalogue.data.source.remote.Repository
+import androidx.paging.PagedList
+import com.yofi.moviecatalogue.data.Repository
+import com.yofi.moviecatalogue.data.source.local.entities.MovieEntity
+import com.yofi.moviecatalogue.data.source.local.entities.TvShowEntity
 import com.yofi.moviecatalogue.data.source.response.ItemMovie
 import com.yofi.moviecatalogue.data.source.response.ItemTvShow
+import com.yofi.moviecatalogue.vo.Resource
 
 class MainViewModel(private val repository: Repository): ViewModel() {
-    fun getListMovie(): LiveData<List<ItemMovie>> =  repository.getMovie()
+    fun getListMovie(): LiveData<Resource<PagedList<MovieEntity>>> =  repository.getMovie()
 
-    fun getListTvShow(): LiveData<List<ItemTvShow>> =  repository.getTvShow()
+    fun getListTvShow(): LiveData<Resource<PagedList<TvShowEntity>>> =  repository.getTvShow()
 
-    fun getSearchMovie(name: String): LiveData<List<ItemMovie>> = repository.getMovieByName(name)
+    fun getSearchMovie(name: String): LiveData<Resource<PagedList<MovieEntity>>> = repository.getMovieByName(name)
 
-    fun getSearchTvShow(name: String): LiveData<List<ItemTvShow>> = repository.getTvShowByName(name)
+    fun getSearchTvShow(name: String): LiveData<Resource<PagedList<TvShowEntity>>> = repository.getTvShowByName(name)
 }

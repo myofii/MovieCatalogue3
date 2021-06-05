@@ -1,4 +1,4 @@
-package com.yofi.moviecatalogue.ui.main.movie
+package com.yofi.moviecatalogue.ui.favorite.movie
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -13,7 +13,7 @@ import com.yofi.moviecatalogue.data.source.response.ItemMovie
 import com.yofi.moviecatalogue.databinding.ItemFilmBinding
 import com.yofi.moviecatalogue.ui.detail.DetailActivity
 
-class MovieAdapter: PagedListAdapter<MovieEntity, MovieAdapter.LinearViewHolder>(DIFF_CALLBACK) {
+class FavMovieAdapter: PagedListAdapter<MovieEntity, FavMovieAdapter.LinearViewHolder>(DIFF_CALLBACK) {
     companion object {
         private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<MovieEntity>() {
             override fun areItemsTheSame(oldItem: MovieEntity, newItem: MovieEntity): Boolean {

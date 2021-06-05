@@ -1,4 +1,4 @@
-package com.yofi.moviecatalogue.ui.main.movie
+package com.yofi.moviecatalogue.ui.favorite.tvshow
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -8,38 +8,38 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.yofi.moviecatalogue.BuildConfig
-import com.yofi.moviecatalogue.data.source.local.entities.MovieEntity
-import com.yofi.moviecatalogue.data.source.response.ItemMovie
+import com.yofi.moviecatalogue.data.source.local.entities.TvShowEntity
+import com.yofi.moviecatalogue.data.source.response.ItemTvShow
 import com.yofi.moviecatalogue.databinding.ItemFilmBinding
 import com.yofi.moviecatalogue.ui.detail.DetailActivity
 
-class MovieAdapter: PagedListAdapter<MovieEntity, MovieAdapter.LinearViewHolder>(DIFF_CALLBACK) {
+class FavTvShowAdapter: PagedListAdapter<TvShowEntity, FavTvShowAdapter.LinearViewHolder>(DIFF_CALLBACK){
     companion object {
-        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<MovieEntity>() {
-            override fun areItemsTheSame(oldItem: MovieEntity, newItem: MovieEntity): Boolean {
+        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<TvShowEntity>() {
+            override fun areItemsTheSame(oldItem: TvShowEntity, newItem: TvShowEntity): Boolean {
                 return oldItem.id == newItem.id
             }
-            override fun areContentsTheSame(oldItem: MovieEntity, newItem: MovieEntity): Boolean {
+            override fun areContentsTheSame(oldItem: TvShowEntity, newItem: TvShowEntity): Boolean {
                 return oldItem == newItem
             }
         }
     }
 
-    private val list = ArrayList<ItemMovie>()
+    private val list = ArrayList<ItemTvShow>()
 
-    inner class LinearViewHolder(private val binding: ItemFilmBinding): RecyclerView.ViewHolder(binding.root){
-        fun bind(data: MovieEntity){
+    inner class LinearViewHolder(val binding: ItemFilmBinding): RecyclerView.ViewHolder(binding.root){
+        fun bind(data: TvShowEntity){
             binding.apply {
                 Glide.with(itemView)
                     .load(BuildConfig.IMAGE_URL + data.posterPath)
                     .into(imgPoster)
-                tvName.text = data.originalTitle + " ("+if (data.releaseDate != "") data.releaseDate?.substring(0,4)+")" else "-)"
+                tvName.text = data.originalName + " ("+ if (data.firstAirDate != "") data.firstAirDate?.substring(0,4)+")" else "-)"
                 tvRating.text = data.voteAverage.toString()
 
                 itemView.setOnClickListener{
                     val moveIntent = Intent(itemView.context, DetailActivity::class.java)
                     moveIntent.putExtra(DetailActivity.EXTRA_ID, data.id)
-                    moveIntent.putExtra(DetailActivity.EXTRA_TYPE, "MOVIE")
+                    moveIntent.putExtra(DetailActivity.EXTRA_TYPE, "TVSHOW")
                     itemView.context.startActivity(moveIntent)
                 }
             }
@@ -52,9 +52,9 @@ class MovieAdapter: PagedListAdapter<MovieEntity, MovieAdapter.LinearViewHolder>
     }
 
     override fun onBindViewHolder(holder: LinearViewHolder, position: Int) {
-        val movie = getItem(position)
-        if (movie!=null){
-            holder.bind(movie)
+        val tvShow = getItem(position)
+        if (tvShow!=null){
+            holder.bind(tvShow)
         }
     }
 
