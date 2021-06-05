@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yofi.moviecatalogue.R
 import com.yofi.moviecatalogue.databinding.FragmentFavTvshowBinding
+import com.yofi.moviecatalogue.ui.favorite.FavoriteViewModel
 import com.yofi.moviecatalogue.ui.main.MainViewModel
 import com.yofi.moviecatalogue.viewmodel.ViewModelFactory
 import com.yofi.moviecatalogue.vo.Status
@@ -16,7 +17,7 @@ import com.yofi.moviecatalogue.vo.Status
 class FavTvShowFragment: Fragment(R.layout.fragment_fav_tvshow) {
     private var _binding : FragmentFavTvshowBinding? = null
     private val binding get() = _binding!!
-    private lateinit var viewModel: MainViewModel
+    private lateinit var viewModel: FavoriteViewModel
     private lateinit var adapter: FavTvShowAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -37,22 +38,13 @@ class FavTvShowFragment: Fragment(R.layout.fragment_fav_tvshow) {
 
     private fun viewModel() {
         activity?.let {
-            viewModel = ViewModelProvider(it, ViewModelFactory.getInstance(requireActivity()))[MainViewModel::class.java]
+            viewModel = ViewModelProvider(it, ViewModelFactory.getInstance(requireActivity()))[FavoriteViewModel::class.java]
         }
 
-        viewModel.getListTvShow().observe(viewLifecycleOwner, { listTvShow ->
+        viewModel.getFavTvShow().observe(viewLifecycleOwner, { listTvShow ->
             if (listTvShow != null) {
-                when (listTvShow.status) {
-                    Status.LOADING -> binding.progressBar.visibility = View.VISIBLE
-                    Status.SUCCESS -> {
-                        binding.progressBar.visibility = View.GONE
-                        adapter.submitList(listTvShow.data)
-                    }
-                    Status.ERROR -> {
-                        binding.progressBar.visibility = View.GONE
-                        Toast.makeText(context, "Terjadi kesalahan", Toast.LENGTH_SHORT).show()
-                    }
-                }
+                binding.progressBar.visibility = View.GONE
+                adapter.submitList(listTvShow)
             }
         })
     }

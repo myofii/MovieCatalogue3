@@ -1,6 +1,7 @@
 package com.yofi.moviecatalogue.ui.main
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.paging.PagedList
 import com.yofi.moviecatalogue.data.Repository

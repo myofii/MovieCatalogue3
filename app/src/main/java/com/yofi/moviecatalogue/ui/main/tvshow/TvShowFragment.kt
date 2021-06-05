@@ -2,7 +2,9 @@ package com.yofi.moviecatalogue.ui.main.tvshow
 
 import android.os.Bundle
 import android.view.KeyEvent
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -18,20 +20,26 @@ class TvShowFragment: Fragment(R.layout.fragment_list_tvshow) {
     private var _binding : FragmentListTvshowBinding? = null
     private val binding get() = _binding!!
     private lateinit var viewModel: MainViewModel
-    private lateinit var adapter: TvShowAdapter
+    private lateinit var tvShowAdapter: TvShowAdapter
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentListTvshowBinding.inflate(layoutInflater)
+        return binding.root
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        _binding = FragmentListTvshowBinding.bind(view)
-
-        adapter = TvShowAdapter()
-        adapter.notifyDataSetChanged()
+        tvShowAdapter = TvShowAdapter()
 
         binding.apply {
             rvTvShow.setHasFixedSize(true)
             rvTvShow.layoutManager = LinearLayoutManager(activity)
-            rvTvShow.adapter = adapter
+            rvTvShow.adapter = tvShowAdapter
 
             btnSearch.setOnClickListener {
                 searchMovie()
@@ -63,7 +71,7 @@ class TvShowFragment: Fragment(R.layout.fragment_list_tvshow) {
                         Status.LOADING -> binding.progressBar.visibility = View.VISIBLE
                         Status.SUCCESS -> {
                             binding.progressBar.visibility = View.GONE
-                            adapter.submitList(listTvShow.data)
+                            tvShowAdapter.submitList(listTvShow.data)
                         }
                         Status.ERROR -> {
                             binding.progressBar.visibility = View.GONE
@@ -89,7 +97,7 @@ class TvShowFragment: Fragment(R.layout.fragment_list_tvshow) {
                     Status.LOADING -> binding.progressBar.visibility = View.VISIBLE
                     Status.SUCCESS -> {
                         binding.progressBar.visibility = View.GONE
-                        adapter.submitList(listTvShow.data)
+                        tvShowAdapter.submitList(listTvShow.data)
                     }
                     Status.ERROR -> {
                         binding.progressBar.visibility = View.GONE

@@ -35,8 +35,8 @@ class RemoteDataSource {
                 response: Response<MovieResponse>
             ) {
                 if (response.isSuccessful) {
-                    listMovie.value =
-                        ApiResponse.success(response.body()?.results as List<ItemMovie>)
+                    listMovie.value = ApiResponse.success(response.body()?.results as List<ItemMovie>)
+                    Log.d("getMovie",listMovie.value.toString())
                     EspressoIdlingResource.decrement()
                 } else {
                     Log.e("getMovie", "Not Success: ${response.message()}")

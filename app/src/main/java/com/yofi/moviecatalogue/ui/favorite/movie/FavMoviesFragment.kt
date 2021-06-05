@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yofi.moviecatalogue.R
 import com.yofi.moviecatalogue.databinding.FragmentFavMovieBinding
+import com.yofi.moviecatalogue.ui.favorite.FavoriteViewModel
 import com.yofi.moviecatalogue.ui.main.MainViewModel
 import com.yofi.moviecatalogue.viewmodel.ViewModelFactory
 import com.yofi.moviecatalogue.vo.Status
@@ -16,7 +17,7 @@ import com.yofi.moviecatalogue.vo.Status
 class FavMoviesFragment : Fragment(R.layout.fragment_fav_movie) {
     private var _binding: FragmentFavMovieBinding? = null
     private val binding get() = _binding!!
-    private lateinit var viewModel: MainViewModel
+    private lateinit var viewModel: FavoriteViewModel
     private lateinit var adapter: FavMovieAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -37,22 +38,13 @@ class FavMoviesFragment : Fragment(R.layout.fragment_fav_movie) {
 
     private fun viewModel() {
         activity?.let {
-            viewModel = ViewModelProvider(it, ViewModelFactory.getInstance(requireActivity()))[MainViewModel::class.java]
+            viewModel = ViewModelProvider(it, ViewModelFactory.getInstance(requireActivity()))[FavoriteViewModel::class.java]
         }
 
-        viewModel.getListMovie().observe(viewLifecycleOwner, { listMovie ->
+        viewModel.getFavMovie().observe(viewLifecycleOwner, { listMovie ->
             if (listMovie != null) {
-                when (listMovie.status) {
-                    Status.LOADING -> binding.progressBar.visibility = View.VISIBLE
-                    Status.SUCCESS -> {
-                        binding.progressBar.visibility = View.GONE
-                        adapter.submitList(listMovie.data)
-                    }
-                    Status.ERROR -> {
-                        binding.progressBar.visibility = View.GONE
-                        Toast.makeText(context, "Terjadi kesalahan", Toast.LENGTH_SHORT).show()
-                    }
-                }
+                binding.progressBar.visibility = View.GONE
+                adapter.submitList(listMovie)
             }
         })
     }

@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
@@ -14,67 +14,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7fba789-e7ff-4461-9d6f-dc3d7cc3488b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_1_0_alpha03_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_paging_paging_common_2_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_paging_paging_runtime_2_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_room_room_common_2_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_room_room_runtime_2_2_5_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_sqlite_sqlite_2_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_sqlite_sqlite_framework_2_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/NetworkBoundResource.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/source/local/LocalDataSource.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/source/local/entities/MovieEntity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/source/local/entities/TvShowEntity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/source/local/room/MovieCatalogueDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/source/local/room/MovieCatalogueDatabase.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/source/remote/ApiResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/source/remote/StatusResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/favorite/FavoriteActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/favorite/SectionPagerAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/favorite/movie/FavMovieAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/favorite/movie/FavMoviesFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/favorite/tvshow/FavTvShowAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/favorite/tvshow/FavTvShowFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/utils/AppExecutors.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/vo/Resource.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/vo/Status.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_favorite.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_fav_movie.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_fav_tvshow.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/MovieCatalogue.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/MovieCatalogue.app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/favorite/FavoriteViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/ui/favorite/FavoriteViewModelTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/yofi/moviecatalogue/ui/main/MainActivityTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/yofi/moviecatalogue/ui/main/MainActivityTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/DataEntity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/EspressoIdlingResource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/utils/EspressoIdlingResource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/Injection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/di/Injection.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/source/local/Dummy.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/utils/Dummy.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/source/remote/DataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/DataSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/Repository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/Repository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/source/remote/RemoteDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/source/remote/RemoteDataSource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/source/remote/Repository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/Repository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/detail/DetailActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/detail/DetailActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/detail/DetailViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/detail/DetailViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/main/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/main/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/favorite/movie/FavMovieAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/favorite/movie/FavMovieAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/favorite/movie/FavMoviesFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/favorite/movie/FavMoviesFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/favorite/tvshow/FavTvShowAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/favorite/tvshow/FavTvShowAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/favorite/tvshow/FavTvShowFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/favorite/tvshow/FavTvShowFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/main/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/main/MainViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/main/movie/MovieAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/main/movie/MovieAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/main/movie/MoviesFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/main/movie/MoviesFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/main/tvshow/TvShowAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/main/tvshow/TvShowAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/main/tvshow/TvShowFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/main/tvshow/TvShowFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/viewmodel/ViewModelFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/viewmodel/ViewModelFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/data/source/remote/FakeRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/data/source/remote/FakeRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/data/source/remote/RepositoryTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/data/source/remote/RepositoryTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/ui/detail/DetailViewModelTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/ui/detail/DetailViewModelTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/ui/main/MainViewModelTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/ui/main/MainViewModelTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[SerialNumber@62abd686]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\myofi\.android\avd\myPhone.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -85,8 +49,8 @@
       <list>
         <option value="Kotlin Interface" />
         <option value="Class" />
-        <option value="JUnit4 Test Class" />
         <option value="Kotlin Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -106,7 +70,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/ui" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/favorite" />
     <property name="project.structure.last.edited" value="Build Variants" />
     <property name="project.structure.proportion" value="0.17" />
@@ -126,10 +90,8 @@
       <recent name="com.yofi.moviecatalogue.data.source.api" />
       <recent name="com.yofi.moviecatalogue.ui.main.tvshow" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.yofi.moviecatalogue.ui.favorite" />
       <recent name="com.yofi.moviecatalogue.data.source.remote" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
@@ -139,11 +101,8 @@
       <recent name="com.yofi.moviecatalogue.ui" />
       <recent name="com.yofi.moviecatalogue.data.source.remote" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\PCR\smt6\jetpack_pro\sub3_lagi\MovieCatalogue\app\src\main\java\com\yofi\moviecatalogue\utils" />
-      <recent name="D:\PCR\smt6\jetpack_pro\sub3_lagi\MovieCatalogue\app\src\main\java\com\yofi\moviecatalogue\data" />
-      <recent name="D:\PCR\smt6\jetpack_pro\sub3_lagi\MovieCatalogue\app\src\main\java\com\yofi\moviecatalogue\data\source" />
-      <recent name="D:\PCR\smt6\jetpack_pro\sub2\MovieCatalogue\app\src\main\java\com\yofi\moviecatalogue\data\source" />
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\PCR\smt6\jetpack_pro\sub3_lagi\MovieCatalogue\app\src\main\java\com\yofi\moviecatalogue\ui\favorite" />
@@ -154,6 +113,12 @@
     </key>
     <key name="android.template.700096291">
       <recent name="com.yofi.moviecatalogue.ui.favorite" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PCR\smt6\jetpack_pro\sub3_lagi\MovieCatalogue\app\src\main\java\com\yofi\moviecatalogue\utils" />
+      <recent name="D:\PCR\smt6\jetpack_pro\sub3_lagi\MovieCatalogue\app\src\main\java\com\yofi\moviecatalogue\data" />
+      <recent name="D:\PCR\smt6\jetpack_pro\sub3_lagi\MovieCatalogue\app\src\main\java\com\yofi\moviecatalogue\data\source" />
+      <recent name="D:\PCR\smt6\jetpack_pro\sub2\MovieCatalogue\app\src\main\java\com\yofi\moviecatalogue\data\source" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -483,7 +448,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622488477974</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="datanya ilang">
+      <created>1622904551827</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1622904551827</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -495,13 +467,14 @@
     <MESSAGE value="tinggal testing" />
     <MESSAGE value="beres" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="datanya ilang" />
+    <option name="LAST_COMMIT_MESSAGE" value="datanya ilang" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="90" key="#Intentions" timestamp="1622471786432">
+    <state x="361" y="90" key="#Intentions" timestamp="1622911202970">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="90" key="#Intentions/0.0.1536.864@0.0.1536.864" timestamp="1622471786432" />
+    <state x="361" y="90" key="#Intentions/0.0.1536.864@0.0.1536.864" timestamp="1622911202970" />
     <state x="286" y="178" key="#PSD" timestamp="1622463329869">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -538,10 +511,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="614" y="239" key="AndroidCreateXmlResourceDialog/0.0.1536.864@0.0.1536.864" timestamp="1622881347099" />
-    <state x="372" y="0" key="CommitChangelistDialog2" timestamp="1622488465457">
+    <state x="372" y="0" key="CommitChangelistDialog2" timestamp="1622904546948">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="372" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1622488465457" />
+    <state x="372" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1622904546948" />
     <state x="549" y="158" key="FileChooserDialogImpl" timestamp="1622881684779">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -554,38 +527,38 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="377" y="137" key="Github.UntrackedFilesDialog/0.0.1536.864@0.0.1536.864" timestamp="1622881722331" />
-    <state width="1493" height="265" key="GridCell.Tab.0.bottom" timestamp="1622904191286">
+    <state width="1493" height="202" key="GridCell.Tab.0.bottom" timestamp="1622911015148">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1622904191286" />
-    <state width="1493" height="265" key="GridCell.Tab.0.center" timestamp="1622904191286">
+    <state width="1493" height="202" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1622911015148" />
+    <state width="1493" height="202" key="GridCell.Tab.0.center" timestamp="1622911015148">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1622904191286" />
-    <state width="1493" height="265" key="GridCell.Tab.0.left" timestamp="1622904191286">
+    <state width="1493" height="202" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1622911015148" />
+    <state width="1493" height="202" key="GridCell.Tab.0.left" timestamp="1622911015148">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1622904191286" />
-    <state width="1493" height="265" key="GridCell.Tab.0.right" timestamp="1622904191286">
+    <state width="1493" height="202" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1622911015148" />
+    <state width="1493" height="202" key="GridCell.Tab.0.right" timestamp="1622911015148">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1622904191286" />
+    <state width="1493" height="202" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1622911015148" />
     <state x="277" y="77" key="SettingsEditor" timestamp="1622880341422">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1622880341422" />
-    <state x="361" y="152" key="Vcs.Push.Dialog.v2" timestamp="1622488467258">
+    <state x="361" y="152" key="Vcs.Push.Dialog.v2" timestamp="1622904550659">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="152" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1622488467258" />
-    <state x="583" y="210" key="chooseDestDirectoryDialog" timestamp="1622475090318">
+    <state x="361" y="152" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1622904550659" />
+    <state x="583" y="210" key="chooseDestDirectoryDialog" timestamp="1622911266173">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="583" y="210" key="chooseDestDirectoryDialog/0.0.1536.864@0.0.1536.864" timestamp="1622475090318" />
-    <state x="505" y="218" key="org.jetbrains.kotlin.idea.testIntegration.KotlinCreateTestDialog" timestamp="1622475090360">
+    <state x="583" y="210" key="chooseDestDirectoryDialog/0.0.1536.864@0.0.1536.864" timestamp="1622911266173" />
+    <state x="505" y="218" key="org.jetbrains.kotlin.idea.testIntegration.KotlinCreateTestDialog" timestamp="1622911266194">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="505" y="218" key="org.jetbrains.kotlin.idea.testIntegration.KotlinCreateTestDialog/0.0.1536.864@0.0.1536.864" timestamp="1622475090360" />
+    <state x="505" y="218" key="org.jetbrains.kotlin.idea.testIntegration.KotlinCreateTestDialog/0.0.1536.864@0.0.1536.864" timestamp="1622911266194" />
     <state x="425" y="197" key="run.anything.popup" timestamp="1622881374574">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

@@ -25,8 +25,6 @@ class FavMovieAdapter: PagedListAdapter<MovieEntity, FavMovieAdapter.LinearViewH
         }
     }
 
-    private val list = ArrayList<ItemMovie>()
-
     inner class LinearViewHolder(private val binding: ItemFilmBinding): RecyclerView.ViewHolder(binding.root){
         fun bind(data: MovieEntity){
             binding.apply {
@@ -48,7 +46,7 @@ class FavMovieAdapter: PagedListAdapter<MovieEntity, FavMovieAdapter.LinearViewH
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LinearViewHolder {
         val view = ItemFilmBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return LinearViewHolder((view))
+        return LinearViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: LinearViewHolder, position: Int) {
@@ -57,6 +55,4 @@ class FavMovieAdapter: PagedListAdapter<MovieEntity, FavMovieAdapter.LinearViewH
             holder.bind(movie)
         }
     }
-
-    override fun getItemCount(): Int = list.size
 }

@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.yofi.moviecatalogue.di.Injection
 import com.yofi.moviecatalogue.data.Repository
 import com.yofi.moviecatalogue.ui.detail.DetailViewModel
+import com.yofi.moviecatalogue.ui.favorite.FavoriteViewModel
 import com.yofi.moviecatalogue.ui.main.MainViewModel
 
 class ViewModelFactory private constructor(private val repository: Repository) :
@@ -29,6 +30,9 @@ class ViewModelFactory private constructor(private val repository: Repository) :
             }
             modelClass.isAssignableFrom(DetailViewModel::class.java) -> {
                 DetailViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(FavoriteViewModel::class.java) -> {
+                FavoriteViewModel(repository) as T
             }
             else -> throw Throwable("Unknown ViewModel class" + modelClass.name)
         }

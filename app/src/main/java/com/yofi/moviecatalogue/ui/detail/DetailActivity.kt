@@ -43,6 +43,7 @@ class DetailActivity : AppCompatActivity() {
                     when (movie.status) {
                         Status.LOADING -> showLoading(true)
                         Status.SUCCESS -> {
+                            showLoading(false)
                             showDetailMovie(movie.data)
                             binding.togFav.setOnClickListener{
                                 viewModel.setFavoriteMovie(movie.data!!)
@@ -67,6 +68,7 @@ class DetailActivity : AppCompatActivity() {
                     when (tvShow.status) {
                         Status.LOADING -> showLoading(true)
                         Status.SUCCESS -> {
+                            showLoading(false)
                             showDetailTvShow(tvShow.data)
                             binding.togFav.setOnClickListener{
                                 viewModel.setFavoriteTvShow(tvShow.data!!)

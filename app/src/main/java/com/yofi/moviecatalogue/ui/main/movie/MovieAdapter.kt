@@ -25,8 +25,6 @@ class MovieAdapter: PagedListAdapter<MovieEntity, MovieAdapter.LinearViewHolder>
         }
     }
 
-    private val list = ArrayList<ItemMovie>()
-
     inner class LinearViewHolder(private val binding: ItemFilmBinding): RecyclerView.ViewHolder(binding.root){
         fun bind(data: MovieEntity){
             binding.apply {
@@ -48,15 +46,13 @@ class MovieAdapter: PagedListAdapter<MovieEntity, MovieAdapter.LinearViewHolder>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LinearViewHolder {
         val view = ItemFilmBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return LinearViewHolder((view))
+        return LinearViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: LinearViewHolder, position: Int) {
         val movie = getItem(position)
-        if (movie!=null){
+        if (movie!=null) {
             holder.bind(movie)
         }
     }
-
-    override fun getItemCount(): Int = list.size
 }

@@ -1,8 +1,11 @@
 package com.yofi.moviecatalogue.ui.main.movie
 
 import android.os.Bundle
+import android.util.Log
 import android.view.KeyEvent
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -18,20 +21,26 @@ class MoviesFragment : Fragment(R.layout.fragment_list_movie) {
     private var _binding: FragmentListMovieBinding? = null
     private val binding get() = _binding!!
     private lateinit var viewModel: MainViewModel
-    private lateinit var adapter: MovieAdapter
+    private lateinit var movieAdapter: MovieAdapter
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentListMovieBinding.inflate(layoutInflater)
+        return binding.root
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        _binding = FragmentListMovieBinding.bind(view)
-
-        adapter = MovieAdapter()
-        adapter.notifyDataSetChanged()
+        movieAdapter = MovieAdapter()
 
         binding.apply {
             rvMovie.setHasFixedSize(true)
             rvMovie.layoutManager = LinearLayoutManager(activity)
-            rvMovie.adapter = adapter
+            rvMovie.adapter = movieAdapter
 
             btnSearch.setOnClickListener {
                 searchMovie()
@@ -63,7 +72,7 @@ class MoviesFragment : Fragment(R.layout.fragment_list_movie) {
                         Status.LOADING -> binding.progressBar.visibility = View.VISIBLE
                         Status.SUCCESS -> {
                             binding.progressBar.visibility = View.GONE
-                            adapter.submitList(listMovie.data)
+                            movieAdapter.submitList(listMovie.data)
                         }
                         Status.ERROR -> {
                             binding.progressBar.visibility = View.GONE
@@ -89,7 +98,8 @@ class MoviesFragment : Fragment(R.layout.fragment_list_movie) {
                     Status.LOADING -> binding.progressBar.visibility = View.VISIBLE
                     Status.SUCCESS -> {
                         binding.progressBar.visibility = View.GONE
-                        adapter.submitList(listMovie.data)
+                        movieAdapter.submitList(listMovie.data)
+                        Log.d("coba2",listMovie.data.toString())
                     }
                     Status.ERROR -> {
                         binding.progressBar.visibility = View.GONE

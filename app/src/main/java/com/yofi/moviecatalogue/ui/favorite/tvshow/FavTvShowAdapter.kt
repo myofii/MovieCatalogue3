@@ -25,8 +25,6 @@ class FavTvShowAdapter: PagedListAdapter<TvShowEntity, FavTvShowAdapter.LinearVi
         }
     }
 
-    private val list = ArrayList<ItemTvShow>()
-
     inner class LinearViewHolder(val binding: ItemFilmBinding): RecyclerView.ViewHolder(binding.root){
         fun bind(data: TvShowEntity){
             binding.apply {
@@ -48,7 +46,7 @@ class FavTvShowAdapter: PagedListAdapter<TvShowEntity, FavTvShowAdapter.LinearVi
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LinearViewHolder {
         val view = ItemFilmBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return LinearViewHolder((view))
+        return LinearViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: LinearViewHolder, position: Int) {
@@ -57,6 +55,4 @@ class FavTvShowAdapter: PagedListAdapter<TvShowEntity, FavTvShowAdapter.LinearVi
             holder.bind(tvShow)
         }
     }
-
-    override fun getItemCount(): Int = list.size
 }

@@ -24,8 +24,6 @@ class Repository private constructor(
     ) :
     DataSource {
 
-    private val _isLoading = MutableLiveData<Boolean>()
-
     companion object {
         @Volatile
         private var instance: Repository? = null
