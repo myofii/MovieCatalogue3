@@ -1,7 +1,6 @@
 package com.yofi.moviecatalogue.ui.main.movie
 
 import android.os.Bundle
-import android.util.Log
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +10,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yofi.moviecatalogue.R
-import com.yofi.moviecatalogue.data.source.response.ItemMovie
 import com.yofi.moviecatalogue.databinding.FragmentListMovieBinding
 import com.yofi.moviecatalogue.ui.main.MainViewModel
 import com.yofi.moviecatalogue.viewmodel.ViewModelFactory
@@ -76,6 +74,7 @@ class MoviesFragment : Fragment(R.layout.fragment_list_movie) {
                         }
                         Status.ERROR -> {
                             binding.progressBar.visibility = View.GONE
+                            binding.dataNotFound.visibility = View.VISIBLE
                             Toast.makeText(context, "Terjadi kesalahan", Toast.LENGTH_SHORT).show()
                         }
                     }
@@ -99,7 +98,6 @@ class MoviesFragment : Fragment(R.layout.fragment_list_movie) {
                     Status.SUCCESS -> {
                         binding.progressBar.visibility = View.GONE
                         movieAdapter.submitList(listMovie.data)
-                        Log.d("coba2",listMovie.data.toString())
                     }
                     Status.ERROR -> {
                         binding.progressBar.visibility = View.GONE

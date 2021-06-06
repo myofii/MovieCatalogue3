@@ -1,14 +1,14 @@
 package com.yofi.moviecatalogue.utils
 
-import com.yofi.moviecatalogue.data.source.response.ItemMovie
-import com.yofi.moviecatalogue.data.source.response.ItemTvShow
+import com.yofi.moviecatalogue.data.source.local.entities.MovieEntity
+import com.yofi.moviecatalogue.data.source.local.entities.TvShowEntity
 
 object Dummy {
-    fun getDataMovie(): List<ItemMovie> {
-        val list = ArrayList<ItemMovie>()
+    fun getDataMovie(): List<MovieEntity> {
+        val list = ArrayList<MovieEntity>()
 
         list.add(
-            ItemMovie(
+            MovieEntity(
                 1,
                 "Godzilla vs. Kong",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
@@ -19,7 +19,7 @@ object Dummy {
         )
 
         list.add(
-            ItemMovie(
+            MovieEntity(
                 2,
                 "The Marksman",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6vcDalR50RWa309vBH1NLmG2rjQ.jpg",
@@ -31,7 +31,7 @@ object Dummy {
 
 
         list.add(
-            ItemMovie(
+            MovieEntity(
                 3,
                 "The Unholy",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4ryVgyGJzdBq8ejVIB0snxBqnyM.jpg",
@@ -42,7 +42,7 @@ object Dummy {
         )
 
         list.add(
-            ItemMovie(
+            MovieEntity(
                 4,
                 "I Am All Girls",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/m6bUeV4mczG3z2YXXr5XDKPsQzv.jpg",
@@ -53,7 +53,7 @@ object Dummy {
         )
 
         list.add(
-            ItemMovie(
+            MovieEntity(
                 5,
                 "Army of the Dead",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/z8CExJekGrEThbpMXAmCFvvgoJR.jpg",
@@ -65,7 +65,7 @@ object Dummy {
         )
 
         list.add(
-            ItemMovie(
+            MovieEntity(
                 6,
                 "The Virtuoso",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vXHzO26mJaOt4VO7ZFiM6No5ScT.jpg",
@@ -76,7 +76,7 @@ object Dummy {
         )
 
         list.add(
-            ItemMovie(
+            MovieEntity(
                 7,
                 "Monster Hunter",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1UCOF11QCw8kcqvce8LKOO6pimh.jpg",
@@ -87,7 +87,7 @@ object Dummy {
         )
 
         list.add(
-            ItemMovie(
+            MovieEntity(
                 8,
                 "Wonder Woman 1984",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg",
@@ -98,7 +98,7 @@ object Dummy {
         )
 
         list.add(
-            ItemMovie(
+            MovieEntity(
                 9,
                 "Tom & Jerry",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6KErczPBROQty7QoIsaa6wJYXZi.jpg",
@@ -109,7 +109,7 @@ object Dummy {
         )
 
         list.add(
-            ItemMovie(
+            MovieEntity(
                 10,
                 "Nobody",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/oBgWY00bEFeZ9N25wWVyuQddbAo.jpg",
@@ -121,11 +121,11 @@ object Dummy {
         return list
     }
 
-    fun getDataTvShow(): ArrayList<ItemTvShow> {
-        val list = ArrayList<ItemTvShow>()
+    fun getDataTvShow(): ArrayList<TvShowEntity> {
+        val list = ArrayList<TvShowEntity>()
 
         list.add(
-            ItemTvShow(
+            TvShowEntity(
                 1,
                 "Lucifer",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4EYPN5mVIhKLfxGruy7Dy41dTVn.jpg",
@@ -136,7 +136,7 @@ object Dummy {
         )
 
         list.add(
-            ItemTvShow(
+            TvShowEntity(
                 2,
                 "The Good Doctor",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6tfT03sGp9k4c0J3dypjrI8TSAI.jpg",
@@ -147,7 +147,7 @@ object Dummy {
         )
 
         list.add(
-            ItemTvShow(
+            TvShowEntity(
                 3,
                 "The Flash",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lJA2RCMfsWoskqlQhXPSLFQGXEJ.jpg",
@@ -158,7 +158,7 @@ object Dummy {
         )
 
         list.add(
-            ItemTvShow(
+            TvShowEntity(
                 4,
                 "Cobra Kai",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4CkQvdUAtoLW3qkjWi7t1MTnW7R.jpg",
@@ -169,7 +169,7 @@ object Dummy {
         )
 
         list.add(
-            ItemTvShow(
+            TvShowEntity(
                 5,
                 "Riverdale",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wRbjVBdDo5qHAEOVYoMWpM58FSA.jpg",
@@ -180,7 +180,7 @@ object Dummy {
         )
 
         list.add(
-            ItemTvShow(
+            TvShowEntity(
                 6,
                 "Grey's Anatomy",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/clnyhPqj1SNgpAdeSS6a6fwE6Bo.jpg",
@@ -191,7 +191,7 @@ object Dummy {
         )
 
         list.add(
-            ItemTvShow(
+            TvShowEntity(
                 7,
                 "Haunted: Latin America",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7au3qp7xw4fQ8eHEsrzWkFMVNm4.jpg",
@@ -202,7 +202,7 @@ object Dummy {
         )
 
         list.add(
-            ItemTvShow(
+            TvShowEntity(
                 8,
                 "Lucifer",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4EYPN5mVIhKLfxGruy7Dy41dTVn.jpg",
@@ -213,7 +213,7 @@ object Dummy {
         )
 
         list.add(
-            ItemTvShow(
+            TvShowEntity(
                 9,
                 "Elite",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3NTAbAiao4JLzFQw6YxP1YZppM8.jpg",
@@ -224,7 +224,7 @@ object Dummy {
         )
 
         list.add(
-            ItemTvShow(
+            TvShowEntity(
                 10,
                 "WandaVision",
                 "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/glKDfE6btIRcVB5zrjspRIs4r52.jpg",

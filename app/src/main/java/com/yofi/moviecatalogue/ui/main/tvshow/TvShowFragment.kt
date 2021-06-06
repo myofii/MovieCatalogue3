@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yofi.moviecatalogue.R
-import com.yofi.moviecatalogue.data.source.response.ItemTvShow
 import com.yofi.moviecatalogue.databinding.FragmentListTvshowBinding
 import com.yofi.moviecatalogue.ui.main.MainViewModel
 import com.yofi.moviecatalogue.viewmodel.ViewModelFactory
@@ -42,12 +41,12 @@ class TvShowFragment: Fragment(R.layout.fragment_list_tvshow) {
             rvTvShow.adapter = tvShowAdapter
 
             btnSearch.setOnClickListener {
-                searchMovie()
+                searchTvShow()
             }
 
             etSearch.setOnKeyListener { _, keyCode, event ->
                 if (event.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER){
-                    searchMovie()
+                    searchTvShow()
                     return@setOnKeyListener true
                 }
                 return@setOnKeyListener false
@@ -56,7 +55,7 @@ class TvShowFragment: Fragment(R.layout.fragment_list_tvshow) {
         viewModel()
     }
 
-    private fun searchMovie(){
+    private fun searchTvShow(){
         binding.apply {
             val q = etSearch.text.toString()
             if (q.isEmpty()){
@@ -75,6 +74,7 @@ class TvShowFragment: Fragment(R.layout.fragment_list_tvshow) {
                         }
                         Status.ERROR -> {
                             binding.progressBar.visibility = View.GONE
+                            binding.dataNotFound.visibility = View.VISIBLE
                             Toast.makeText(context, "Terjadi kesalahan", Toast.LENGTH_SHORT).show()
                         }
                     }

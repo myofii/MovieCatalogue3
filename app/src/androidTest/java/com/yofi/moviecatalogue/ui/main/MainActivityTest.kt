@@ -12,7 +12,6 @@ import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
 import com.yofi.moviecatalogue.R
 import com.yofi.moviecatalogue.utils.EspressoIdlingResource
-import com.yofi.moviecatalogue.utils.Dummy
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
@@ -21,8 +20,6 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4ClassRunner::class)
 class MainActivityTest {
-    private val dummyMovie = Dummy.getDataMovie()
-    private val dummyTvShow = Dummy.getDataTvShow()
 
     @get:Rule
     var activity = ActivityScenarioRule(MainActivity::class.java)
@@ -38,12 +35,12 @@ class MainActivityTest {
     }
 
     @Test
-    fun loadMovie() {
+    fun loadMovieTillFav() {
         onView(withText("Movie")).perform(click())
         onView(withId(R.id.rvMovie)).check(matches(isDisplayed()))
         onView(withId(R.id.rvMovie)).perform(
             RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(
-                dummyMovie.size
+                20
             )
         )
         onView(withId(R.id.rvMovie)).perform(
@@ -56,16 +53,27 @@ class MainActivityTest {
         onView(withId(R.id.tv_name)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_desc)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_rating)).check(matches(isDisplayed()))
+        onView(withId(R.id.togFav)).perform(click())
         pressBack()
+        onView(withText("Movie")).perform(click())
+        onView(withId(R.id.action_to_fav)).check(matches(isDisplayed()))
+        onView(withId(R.id.action_to_fav)).perform(click())
+        onView(withId(R.id.rvMovie)).check(matches(isDisplayed()))
+        onView(withId(R.id.rvMovie)).perform(
+            RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
+                0, click()
+            )
+        )
+        onView(withId(R.id.togFav)).perform(click())
     }
 
     @Test
-    fun loadTvShow() {
+    fun loadTvShowTillFav() {
         onView(withText("Tv Show")).perform(click())
         onView(withId(R.id.rvTvShow)).check(matches(isDisplayed()))
         onView(withId(R.id.rvTvShow)).perform(
             RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(
-                dummyTvShow.size
+                20
             )
         )
         onView(withId(R.id.rvTvShow)).perform(
@@ -78,6 +86,17 @@ class MainActivityTest {
         onView(withId(R.id.tv_name)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_desc)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_rating)).check(matches(isDisplayed()))
+        onView(withId(R.id.togFav)).perform(click())
         pressBack()
+        onView(withId(R.id.action_to_fav)).check(matches(isDisplayed()))
+        onView(withId(R.id.action_to_fav)).perform(click())
+        onView(withText("Tv Show")).perform(click())
+        onView(withId(R.id.rvTvShow)).check(matches(isDisplayed()))
+        onView(withId(R.id.rvTvShow)).perform(
+            RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
+                0, click()
+            )
+        )
+        onView(withId(R.id.togFav)).perform(click())
     }
 }

@@ -1,4 +1,4 @@
-package com.yofi.moviecatalogue.ui
+package com.yofi.moviecatalogue.utils
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer

@@ -24,12 +24,12 @@ class DetailViewModel(private val repository: Repository): ViewModel() {
         this.movieId.value = movieId
     }
 
-    fun getDetailMovieById(): LiveData<Resource<MovieEntity>> = Transformations.switchMap(movieId) { mmovieId ->
-        repository.getMovieById(mmovieId)
+    fun getDetailMovieById(): LiveData<Resource<MovieEntity>> = Transformations.switchMap(movieId) { movieId ->
+        repository.getMovieById(movieId)
     }
 
-    fun getDetailTvShowById(): LiveData<Resource<TvShowEntity>>  = Transformations.switchMap(tvShowId) { ttvShowId ->
-        repository.getTvShowById(ttvShowId)
+    fun getDetailTvShowById(): LiveData<Resource<TvShowEntity>>  = Transformations.switchMap(tvShowId) { tvShowId ->
+        repository.getTvShowById(tvShowId)
     }
 
     fun setFavoriteMovie(movieEntity: MovieEntity) {

@@ -39,13 +39,15 @@ class LocalDataSource private constructor(private val movieCatalogueDao: MovieCa
 
     fun getTvShowByName(q: String): DataSource.Factory<Int, TvShowEntity>  = movieCatalogueDao.getTvShowByName(q)
 
-    fun setFavMovie(movie: MovieEntity, newState: Boolean) {
+    fun setFavMovie(movie: MovieEntity, newState: Boolean): Int {
         movie.favorite = newState
         movieCatalogueDao.updateMovie(movie)
+        return movie.id
     }
 
-    fun setFavTvshow(tvshow: TvShowEntity, newState: Boolean) {
+    fun setFavTvshow(tvshow: TvShowEntity, newState: Boolean): Int {
         tvshow.favorite = newState
         movieCatalogueDao.updateTvshow(tvshow)
+        return tvshow.id
     }
 }
