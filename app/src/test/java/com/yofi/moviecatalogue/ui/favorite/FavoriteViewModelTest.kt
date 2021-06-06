@@ -7,13 +7,15 @@ import androidx.paging.PagedList
 import com.yofi.moviecatalogue.data.Repository
 import com.yofi.moviecatalogue.data.source.local.entities.MovieEntity
 import com.yofi.moviecatalogue.data.source.local.entities.TvShowEntity
-import org.junit.Assert
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
 import org.junit.Test
 import org.junit.Before
 import org.junit.Rule
 import org.junit.runner.RunWith
 import org.mockito.Mock
-import org.mockito.Mockito
+import org.mockito.Mockito.`when`
+import org.mockito.Mockito.verify
 import org.mockito.junit.MockitoJUnitRunner
 
 @RunWith(MockitoJUnitRunner::class)
@@ -46,34 +48,34 @@ class FavoriteViewModelTest {
     @Test
     fun getFavMovie() {
         val getAllDummyMovie = moviesPagedList
-        Mockito.`when`(getAllDummyMovie.size).thenReturn(5)
+        `when`(getAllDummyMovie.size).thenReturn(5)
         val movies = MutableLiveData<PagedList<MovieEntity>>()
         movies.value = getAllDummyMovie
 
-        Mockito.`when`(repository.getFavMovie()).thenReturn(movies)
+        `when`(repository.getFavMovie()).thenReturn(movies)
         val moviesEntity = viewModel.getFavMovie().value
-        Mockito.verify(repository).getFavMovie()
-        Assert.assertNotNull(moviesEntity)
-        Assert.assertEquals(5, moviesEntity?.size)
+        verify(repository).getFavMovie()
+        assertNotNull(moviesEntity)
+        assertEquals(5, moviesEntity?.size)
 
         viewModel.getFavMovie().observeForever(movieObserver)
-        Mockito.verify(movieObserver).onChanged(getAllDummyMovie)
+        verify(movieObserver).onChanged(getAllDummyMovie)
     }
 
     @Test
     fun getFavTvShow() {
         val getAllDummyTvShow = tvShowPagedList
-        Mockito.`when`(getAllDummyTvShow.size).thenReturn(5)
+        `when`(getAllDummyTvShow.size).thenReturn(5)
         val tvshows = MutableLiveData<PagedList<TvShowEntity>>()
         tvshows.value = getAllDummyTvShow
 
-        Mockito.`when`(repository.getFavTvshow()).thenReturn(tvshows)
+        `when`(repository.getFavTvshow()).thenReturn(tvshows)
         val tvShowsEntity = viewModel.getFavTvShow().value
-        Mockito.verify(repository).getFavTvshow()
-        Assert.assertNotNull(tvShowsEntity)
-        Assert.assertEquals(5, tvShowsEntity?.size)
+        verify(repository).getFavTvshow()
+        assertNotNull(tvShowsEntity)
+        assertEquals(5, tvShowsEntity?.size)
 
         viewModel.getFavTvShow().observeForever(tvShowObserver)
-        Mockito.verify(tvShowObserver).onChanged(getAllDummyTvShow)
+        verify(tvShowObserver).onChanged(getAllDummyTvShow)
     }
 }

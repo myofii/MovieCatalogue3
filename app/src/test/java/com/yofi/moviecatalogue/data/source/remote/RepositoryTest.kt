@@ -13,7 +13,6 @@ import com.yofi.moviecatalogue.utils.PagedListUtil
 import com.yofi.moviecatalogue.utils.AppExecutors
 import com.yofi.moviecatalogue.utils.TestExecutor
 import com.yofi.moviecatalogue.vo.Resource
-import junit.framework.Assert
 import org.junit.Test
 import org.junit.Assert.*
 import org.junit.Rule
@@ -53,7 +52,7 @@ class RepositoryTest {
 
         val tvshowEntities = Resource.success(PagedListUtil.mockPagedList((Dummy.getDataTvShow())))
         verify(local).getAllTvshow()
-        Assert.assertNotNull(tvshowEntities.data)
+        assertNotNull(tvshowEntities.data)
         assertEquals(tvShowResponses.size.toLong(), tvshowEntities.data?.size?.toLong())
     }
 
@@ -84,17 +83,17 @@ class RepositoryTest {
         verify(local)
             .getMovieById(movieId)
 
-        Assert.assertNotNull(movieDetailEntitiesContent)
+        assertNotNull(movieDetailEntitiesContent)
     }
 
     @Test
     fun getMovieByName() {
         val dataSourceFactory = mock(DataSource.Factory::class.java) as DataSource.Factory<Int, MovieEntity>
-        `when`(local.getMovieByName("a")).thenReturn(dataSourceFactory)
-        repository.getMovieByName("a")
+        `when`(local.getMovieByName("conjuring")).thenReturn(dataSourceFactory)
+        repository.getMovieByName("conjuring")
 
         val movieEntities = Resource.success(PagedListUtil.mockPagedList(Dummy.getDataMovie()))
-        verify(local).getMovieByName("a")
+        verify(local).getMovieByName("conjuring")
         assertNotNull(movieEntities.data)
         assertEquals(movieResponses.size.toLong(), movieEntities.data?.size?.toLong())
     }
@@ -102,12 +101,12 @@ class RepositoryTest {
     @Test
     fun getTvShowByName() {
         val dataSourceFactory = mock(DataSource.Factory::class.java) as DataSource.Factory<Int, TvShowEntity>
-        `when`(local.getTvShowByName("a")).thenReturn(dataSourceFactory)
-        repository.getTvShowByName("a")
+        `when`(local.getTvShowByName("conjuring")).thenReturn(dataSourceFactory)
+        repository.getTvShowByName("conjuring")
 
         val tvshowEntities = Resource.success(PagedListUtil.mockPagedList((Dummy.getDataTvShow())))
-        verify(local).getTvShowByName("a")
-        Assert.assertNotNull(tvshowEntities.data)
+        verify(local).getTvShowByName("conjuring")
+        assertNotNull(tvshowEntities.data)
         assertEquals(tvShowResponses.size.toLong(), tvshowEntities.data?.size?.toLong())
     }
 

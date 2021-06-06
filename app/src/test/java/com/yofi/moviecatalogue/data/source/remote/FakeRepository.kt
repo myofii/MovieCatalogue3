@@ -5,7 +5,6 @@ import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
 import com.yofi.moviecatalogue.data.DataSource
 import com.yofi.moviecatalogue.data.NetworkBoundResource
-import com.yofi.moviecatalogue.data.Repository
 import com.yofi.moviecatalogue.data.source.local.LocalDataSource
 import com.yofi.moviecatalogue.data.source.local.entities.MovieEntity
 import com.yofi.moviecatalogue.data.source.local.entities.TvShowEntity
