@@ -13,12 +13,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7fba789-e7ff-4461-9d6f-dc3d7cc3488b" name="Default Changelist" comment="fix">
+    <list default="true" id="b7fba789-e7ff-4461-9d6f-dc3d7cc3488b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/data/source/remote/FakeRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/data/source/remote/FakeRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/data/source/remote/RepositoryTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/data/source/remote/RepositoryTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/ui/favorite/FavoriteViewModelTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/ui/favorite/FavoriteViewModelTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/ui/main/MainViewModelTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/ui/main/MainViewModelTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +105,7 @@
       <recent name="D:\PCR\smt6\jetpack_pro\sub2\MovieCatalogue\app\src\main\java\com\yofi\moviecatalogue\data\source" />
     </key>
   </component>
-  <component name="RunManager" selected="Android JUnit.MainViewModelTest">
+  <component name="RunManager" selected="Android JUnit.RepositoryTest">
     <configuration name="DetailViewModelTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="MovieCatalogue.app" />
       <extension name="coverage">
@@ -348,8 +345,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Android JUnit.MainViewModelTest" />
         <item itemvalue="Android JUnit.RepositoryTest" />
+        <item itemvalue="Android JUnit.MainViewModelTest" />
         <item itemvalue="Android JUnit.FavoriteViewModelTest" />
         <item itemvalue="Android JUnit.DetailViewModelTest" />
         <item itemvalue="Android Instrumented Tests.MainActivityTest" />
@@ -421,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622995510721</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix">
+      <created>1622996212799</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1622996212800</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -430,11 +434,11 @@
     </ignored-roots>
     <MESSAGE value="tinggal instrument testing" />
     <MESSAGE value="-1 lagi" />
-    <MESSAGE value="fix" />
     <MESSAGE value="datanya ilang" />
     <MESSAGE value="tinggal testing" />
     <MESSAGE value="beres" />
-    <option name="LAST_COMMIT_MESSAGE" value="beres" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="90" key="#Intentions" timestamp="1622911202970">
@@ -477,14 +481,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="614" y="239" key="AndroidCreateXmlResourceDialog/0.0.1536.864@0.0.1536.864" timestamp="1622881347099" />
-    <state x="372" y="0" key="CommitChangelistDialog2" timestamp="1622996122940">
+    <state x="372" y="0" key="CommitChangelistDialog2" timestamp="1622996211325">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="372" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1622996122940" />
-    <state x="549" y="158" key="FileChooserDialogImpl" timestamp="1622995572649">
+    <state x="372" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1622996211325" />
+    <state x="549" y="158" key="FileChooserDialogImpl" timestamp="1622996379846">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1622995572649" />
+    <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1622996379846" />
     <state x="631" y="330" key="Github.ShareDialog" timestamp="1622881696918">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -493,22 +497,22 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="377" y="137" key="Github.UntrackedFilesDialog/0.0.1536.864@0.0.1536.864" timestamp="1622881722331" />
-    <state width="1493" height="251" key="GridCell.Tab.0.bottom" timestamp="1622995415923">
+    <state width="1493" height="251" key="GridCell.Tab.0.bottom" timestamp="1623008334534">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="251" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1622995415923" />
-    <state width="1493" height="251" key="GridCell.Tab.0.center" timestamp="1622995415922">
+    <state width="1493" height="251" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1623008334534" />
+    <state width="1493" height="251" key="GridCell.Tab.0.center" timestamp="1623008334534">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="251" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1622995415922" />
-    <state width="1493" height="251" key="GridCell.Tab.0.left" timestamp="1622995415922">
+    <state width="1493" height="251" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1623008334534" />
+    <state width="1493" height="251" key="GridCell.Tab.0.left" timestamp="1623008334534">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="251" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1622995415922" />
-    <state width="1493" height="251" key="GridCell.Tab.0.right" timestamp="1622995415923">
+    <state width="1493" height="251" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1623008334533" />
+    <state width="1493" height="251" key="GridCell.Tab.0.right" timestamp="1623008334534">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="251" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1622995415923" />
+    <state width="1493" height="251" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1623008334534" />
     <state x="466" y="134" key="RollbackChangesDialog" timestamp="1622993276921">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -517,18 +521,18 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1622880341422" />
-    <state x="361" y="152" key="Vcs.Push.Dialog.v2" timestamp="1622995512758">
+    <state x="361" y="152" key="Vcs.Push.Dialog.v2" timestamp="1622996217439">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="152" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1622995512758" />
+    <state x="361" y="152" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1622996217439" />
     <state x="583" y="210" key="chooseDestDirectoryDialog" timestamp="1622911266173">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="583" y="210" key="chooseDestDirectoryDialog/0.0.1536.864@0.0.1536.864" timestamp="1622911266173" />
-    <state x="586" y="346" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1622995333352">
+    <state x="586" y="346" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1622997030549">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="586" y="346" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1622995333352" />
+    <state x="586" y="346" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1622997030549" />
     <state x="505" y="218" key="org.jetbrains.kotlin.idea.testIntegration.KotlinCreateTestDialog" timestamp="1622911266194">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -537,9 +541,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1622881374574" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1622884787053">
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1622997681282">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1622884787053" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1622997681282" />
   </component>
 </project>

@@ -87,6 +87,32 @@ class RepositoryTest {
     }
 
     @Test
+    fun getAllFavMovie() {
+        val dataSourceFactory =
+            mock(DataSource.Factory::class.java) as DataSource.Factory<Int, MovieEntity>
+        `when`(local.getFavMovies()).thenReturn(dataSourceFactory)
+        repository.getFavMovie()
+
+        val moviesEntity = Resource.success(PagedListUtil.mockPagedList(Dummy.getDataMovie()))
+        verify(local).getFavMovies()
+        assertNotNull(moviesEntity.data)
+        assertEquals(movieResponses.size.toLong(), moviesEntity.data?.size?.toLong())
+    }
+
+    @Test
+    fun getAllFavTvShow() {
+        val dataSourceFactory =
+            mock(DataSource.Factory::class.java) as DataSource.Factory<Int, TvShowEntity>
+        `when`(local.getFavTvshows()).thenReturn(dataSourceFactory)
+        repository.getFavTvshow()
+        val tvShowEntity = Resource.success(PagedListUtil.mockPagedList(Dummy.getDataTvShow()))
+
+        verify(local).getFavTvshows()
+        assertNotNull(tvShowEntity.data)
+        assertEquals(tvShowResponses.size.toLong(), tvShowEntity.data?.size?.toLong())
+    }
+
+    @Test
     fun getMovieByName() {
         val dataSourceFactory = mock(DataSource.Factory::class.java) as DataSource.Factory<Int, MovieEntity>
         `when`(local.getMovieByName("conjuring")).thenReturn(dataSourceFactory)
